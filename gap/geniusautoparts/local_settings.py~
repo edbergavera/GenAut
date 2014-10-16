@@ -1,0 +1,20 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'geniusautoparts',                      # Or path to database file if using sqlite3.
+        'USER': 'geniuspart',                      # Not used with sqlite3.
+        'PASSWORD': '2a9pcQJowyX2',                  # Not used with sqlite3.
+	'HOST': 'db4whm.c6jcfquwfbdj.eu-west-1.rds.amazonaws.com',
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
+
+MEDIA_ROOT = '/home/geniuspart/public_html/media/'
+STATIC_ROOT = '/home/geniuspart/public_html/static/'
+
+EMAIL_HOST = 'geniusautoparts.com'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = False
+EMAIL_HOST_USER = 'oscar.geniusautoparts'
+EMAIL_HOST_PASSWORD = 'kqG5gS9jTMDc87d'
+DEFAULT_FROM_EMAIL = 'oscar@geniusautoparts.com'
