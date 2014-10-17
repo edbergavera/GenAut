@@ -50,15 +50,16 @@ USE_TZ = True
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = location('static')
+MEDIA_ROOT = location('media')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
+STATIC_ROOT = location('static')
 # Additional locations of static files
 STATICFILES_DIRS = (
-    location('static'),
+    # location('static'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -351,7 +352,10 @@ OPTION_ITEMSPERPACK = 'items_per_pack'
 # TODO: Modify this
 OSCAR_MISSING_IMAGE_URL = STATIC_URL + 'options/img/missing-choice-thumbnail.png'
 """
-from local_settings import *
+try:
+    from local_settings import *
+except ImportError:
+    pass
 
 
 ##################        SETTINGS CUSTOM 2014/10/08 ###################
@@ -361,5 +365,4 @@ from local_settings import *
 #DATACASH_CURRENCY = 'GBP'
 OSCAR_DEFAULT_CURRENCY = 'GBP'
 OSCAR_CURRENCY_LOCALE = 'en_US'
-
 
